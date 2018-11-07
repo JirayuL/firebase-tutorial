@@ -47,6 +47,6 @@ firebase.database().ref('files').on('value', snapshot => {
   const list = Object.values(snapshot.val())
   document.getElementById('file-list').innerText = ''
   for (let file of list) {
-    document.getElementById('image-list').innerHTML += `<a href="${file.url}">${file.name}</a><br>`
+    document.getElementById('file-list').innerHTML += `<a href="${file.url}">${file.name}</a><br>`
   }
 })
